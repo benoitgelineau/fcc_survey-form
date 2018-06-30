@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Survey Form</title>
+
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+  <header>
+    <h1 id="title">Survey Form</h1>
+  </header>
+
+  <section>
+
+    <p id="description">Let us know who you are</p>
+    <hr>
+    <form id="survey-form" action="">
+      <!-- Name -->
+      <div class="row">
+        <label class="col-label" id="name-label" for="name">* Name:</label>
+        <input class="col-input" id="name" type="text" placeholder="Enter your name" required>
+      </div>
+      <!-- Email -->
+      <div class="row">
+        <label class="col-label" id="email-label" for="email">* Email:</label>
+        <input class="col-input" id="email" type="email" placeholder="Enter your email address" required>
+      </div>
+      <!-- Age -->
+      <div class="row">
+        <label class="col-label" id="number-label" for="number">* Age:</label>
+        <input class="col-input" id="number" type="number" min="1" max="125" placeholder="Age" required>
+      </div>
+      <!-- Situation -->
+      <div class="row">
+        <label class="col-label" for="dropdown">Which option best describes your current situation?</label>
+        <div class="col-input">
+          <select name="investor-type" id="dropdown" size="1">
+            <option disabled>Select an option</option>
+            <option value="professional">Professional investor</option>
+            <option value="individual">Individual investor</option>
+          </select>
+        </div>
+      </div>
+      <!-- Recommendation -->
+      <div class="row">
+        <label class="col-label" for="radio-btn">* What is your investment horizon?</label>
+
+        <fieldset class="col-input" id="radio-btn" required>
+          <div class="row">
+            <input id="less-5" value="0-5" type="radio" name="horizon">
+            <label for="less-5">&le; 5 years</label>
+          </div>
+
+          <div class="row">
+            <input id="more-5" value="5-10" type="radio" name="horizon">
+            <label for="more-5">&ge; 5 years</label>
+          </div>
+
+          <div class="row">
+            <input id="more-10" value="10+" type="radio" name="horizon">
+            <label for="more-10">&ge; 10 years</label>
+          </div>
+        </fieldset>
+
+      </div>
+      <!-- Improvement -->
+      <div class="row">
+        <label class="col-label" for="checkboxes">With which strategies are you familiar with?<br>(Check all that apply)</label>
+
+        <fieldset class="col-input" id="checkboxes">
+
+          <div class="row">
+            <input id="strat-value" type="checkbox" value="strat-value" name="strategy">
+            <label for="strat-value">Value</label>
+          </div>
+
+          <div class="row">
+            <input id="strat-growth" type="checkbox" value="strat-growth" name="strategy">
+            <label for="strat-growth">Growth</label>
+          </div>
+
+          <div class="row">
+            <input id="strat-largecaps" type="checkbox" value="strat-largecaps" name="strategy">
+            <label for="strat-largecaps">Large caps</label>
+          </div>
+
+          <div class="row">
+            <input id="strat-smallcaps" type="checkbox" value="strat-smallcaps" name="strategy">
+            <label for="strat-smallcaps">Small caps</label>
+          </div>
+
+        </fieldset>
+
+      </div>
+      <!-- Comments -->
+      <div class="row">
+        <label class="col-label" for="comments">Any Comments or Suggestions?</label>
+        <textarea class="col-input" id="comments" name="comments" placeholder="Enter your comment here..."></textarea>
+      </div>
+      <!-- Submit -->
+      <input class="col-input" id="submit" type="submit"></input>
+
+    </form>
+  </section>
+
+  <!-- <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script> -->
+</body>
+</html>
